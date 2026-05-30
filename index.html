@@ -486,7 +486,7 @@
             urlParams.append('entry.770313726', tenure);       // Preferred Repayment Tenure
             urlParams.append('entry.2042460583', empStatus);   // Current Employment Status
 
-            fetch(googleFormUrl, {
+           fetch(googleFormUrl, {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -494,14 +494,13 @@
                 },
                 body: urlParams.toString()
             }).then(() => {
-               }).then(() => {
-            alert("धन्यवाद! आपकी " + loanType + " एप्लीकेशन सफलतापूर्वक दर्ज कर ली गई है। हमारी टीम जल्द ही आपसे संपर्क करेगी।");
-            event.target.reset();
-        }).catch((error) => {
-            alert("क्षमा करें, डेटा भेजने में कोई समस्या हुई।");
-            console.error('Error:', error);
-        });
-    }
-</script>
+                alert("धन्यवाद! आपकी " + loanType + " एप्लीकेशन सफलतापूर्वक दर्ज कर ली गई है। हमारी टीम जल्द ही आपसे संपर्क करेगी।");
+                event.target.reset();
+            }).catch((error) => {
+                alert("क्षमा करें, डेटा भेजने में कोई समस्या हुई।");
+                console.error('Error:', error);
+            });
+        }
+    </script>
 </body>
 </html>
