@@ -494,13 +494,14 @@
                 },
                 body: urlParams.toString()
             }).then(() => {
-                alert("धन्यवाद उमेश भाई! " + loanType + " का डेटा सफलतापूर्वक आपकी गूगल शीट में सेव हो गया है।");
-                event.target.reset();
-            }).catch((error) => {
-                alert("क्षमा करें, डेटा भेजने में कोई समस्या हुई।");
-                console.error('Error:', error);
-            });
-        }
-    </script>
+               }).then(() => {
+            alert("धन्यवाद! आपकी " + loanType + " एप्लीकेशन सफलतापूर्वक दर्ज कर ली गई है। हमारी टीम जल्द ही आपसे संपर्क करेगी।");
+            event.target.reset();
+        }).catch((error) => {
+            alert("क्षमा करें, डेटा भेजने में कोई समस्या हुई।");
+            console.error('Error:', error);
+        });
+    }
+</script>
 </body>
 </html>
